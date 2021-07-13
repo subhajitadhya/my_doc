@@ -1,0 +1,76 @@
+Overview:
+ - DevOps Landscape: https://raw.githubusercontent.com/kamranahmedse/developer-roadmap/master/img/devops.png
+Cloud:
+ - Docker: https://www.docker.com
+ -  - Kubernetes: https://kubernetes.io
+ - Terraform: https://www.terraform.io
+CI/CD:
+ - Travis: https://travis-ci.org
+ -  - GitLab CI: https://docs.gitlab.com/ee/ci/
+ - Jenkins: https://jenkins.io
+ -  - CircleCI: https://circleci.com
+ - AppVeyor: https://www.appveyor.com
+ -  - Bamboo (Altassian): https://www.atlassian.com/software/bamboo
+
+Repos:
+  - Artifactory (jFrog): https://jfrog.com/artifactory/
+Service Mesh:
+ - Consul (Hashicorp): https://www.consul.io/
+ - - Istio: https://istio.io/
+
+Kubernetes:
+ - Backups:
+ -     - Velero: https://github.com/vmware-tanzu/velero
+  - Serverless:
+  -     - Knative: https://github.com/knative
+
+Standards:
+ - Open Containers Initiative (OCI): https://www.opencontainers.org
+ - - Cloud Native Computing Foundation (CNCF): https://www.cncf.io/
+
+Documentation:
+- Principles of Chaos: http://principlesofchaos.org/
+- - Visualize your architecture: http://c4model.com
+
+Audit:
+ - Elastic: https://www.elastic.co/blog/introducing-elastic-siem
+#pin #pinned #post #devops
+
+Some drives 
+You can download course from them
+
+DevOps part 1
+https://drive.google.com/drive/folders/1JfQMk-UNT1mT-pJKOuaPc8fpCrB1uTUR?usp=sharing
+
+DevOps part 2
+https://drive.google.com/drive/folders/1PYmYPHZF3Nakej73XuSJTthi3Dzyx47J?usp=sharing
+
+DevOps part 3
+https://drive.google.com/drive/folders/1PXFSE95DKwKYHr7KSvMorBzDVWcV4WpW?
+usp=sharing
+
+Quick access : topic wise content    
+
+
+Docker :
+https://drive.google.com/drive/folders/1OdyZt-lyUmsxZ0JzRJCq-wW6JpCm1CL_?usp=sharing
+
+GIT
+https://drive.google.com/drive/folders/1hZP62G8IKLLH9ygZIqJgXnIWXr1HNKYi?usp=sharing
+
+Jenkins
+https://drive.google.com/drive/folders/1yTbaGScjjposp15YScJDVxkXnB1aA-vj?usp=sharing
+
+Kubernetes
+https://drive.google.com/drive/folders/1wx13Abt2U1YSCfM_RuvVFx8PwTMThN7S?usp=sharing
+
+packer & Terraform :
+https://drive.google.com/drive/folders/1-6DHrVLzGEt9BUdGP4fAdOpwIUn9HMUp?usp=sharing
+
+
+Docs:
+https://drive.google.com/drive/folders/1VC2urJ73R_kqt9ciYW3euQu2XzsI1M2Y?usp=sharing
+Puppet
+https://drive.google.com/drive/folders/17Oh8ieaQvlsoTSb9JBthhERKcu32IQgS?usp=sharing
+Linux
+https://drive.google.com/drive/folders/1N1IsY7ZcByOHWcK7Al5nXf-3ocxXYd_a?usp=sharing
