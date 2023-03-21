@@ -1,0 +1,52 @@
+version: '3'
+
+volumes:
+  db_data:
+  
+networks:
+  dunkin: {}  
+
+
+
+
+services:
+  web:
+    image: ubuntu:latest
+    container_name: web
+    restart: on-failure
+    build: .
+    volumes:
+     - "../dunkin:/var/www/html/"
+    networks:
+      - dunkin 
+    ports:
+      - "82:80"
+      
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: on-failure
+    networks:
+      - dunkin
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3311:3306"
+    volumes:
+      - db_data:/var/lib/mysql  
+      
+  pma:
+    image: phpmyadmin/phpmyadmin:5.0.2
+    container_name: pma
+   
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: on-failure
+    networks:
+      - dunkin
+    ports:
+      - 8081:80    
+    depends_on:
+      - mysql      

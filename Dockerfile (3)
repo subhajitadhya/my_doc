@@ -1,0 +1,50 @@
+FROM ubuntu:latest as dev
+
+WORKDIR /var/www/html/
+
+ENV DEBIAN_FRONTEND=noninteractive 
+
+ENV APACHE_RUN_DIR /var/www/html
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_PID_FILE /var/run/apache2.pid
+
+RUN apt-get update -y && apt install software-properties-common -y && add-apt-repository ppa:ondrej/php -y && apt-get update && apt-get install php8.1 -y
+
+COPY composer.sh .
+
+#RUN bash composer.sh && mv composer.phar /usr/bin/composer
+
+
+
+
+
+RUN apt-get update && \
+    apt-get -y install \
+        php-fpm \
+        php-cli \
+        php-curl \
+        php-mbstring \
+        php-gd \
+        php-mysql \
+        php-json \
+        php-ldap \
+        php-mime-type \
+		php-pgsql \
+        php-tidy \
+        php-intl \
+        php-xmlrpc \
+        php-soap \
+        php-uploadprogress \
+        php-zip && \
+    apt-get -y autoremove
+RUN apt-get install apache2 -y && apt-get install apache2-utils -y
+COPY ./apache2/localhost.conf /etc/apache2/sites-enabled/
+RUN a2enmod rewrite && service apache2 restart
+RUN service apache2 start    
+EXPOSE 80
+
+
+
+CMD tail -f /dev/null
